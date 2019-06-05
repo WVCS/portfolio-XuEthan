@@ -167,6 +167,17 @@ background-image: url(https://static.vecteezy.com/system/resources/previews/000/
   padding: 8px;
   background-color: lightgreen;
 }
+	
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:1732px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .resp {
+    width: 50%;
+  }
+	
 </style>
 <body>
  
@@ -195,10 +206,10 @@ background-image: url(https://static.vecteezy.com/system/resources/previews/000/
   
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
 	<div class="flipper">
-		<div class="front">
+		<div class="front resp">
       <img src="https://cdn.mos.cms.futurecdn.net/gXzHN749kJm7PWXXRgs2BZ.jpg" width=870px; >
 		</div>
-		<div class="back">
+		<div class="back resp">
       <p> <img src="https://www.uri.edu/programs/wp-content/uploads/programs/sites/3/2014/04/feat_img_comp_sci.jpg" width=870px;> </p>
 		</div>
 	</div>
