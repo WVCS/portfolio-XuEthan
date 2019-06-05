@@ -1,0 +1,171 @@
+.main-body{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 49.2%;
+  float: right;
+  
+}
+
+body {
+background-image: url(https://static.vecteezy.com/system/resources/previews/000/101/237/non_2x/free-abstract-background-11-vector.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+
+.body2 {
+  font-size: 35px;
+}
+
+.top-body {
+  padding:0px;
+}
+
+.crosshair {cursor: crosshair;}
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 1000px;
+  height: 410px;
+  max-width: 100%;
+  z-index: 9999;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+  max-width: 100%;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+  max-width: 100%;
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+
+.footer {
+  font-size: 25px;
+  border: solid black;
+  width: 50%;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.top-body {
+  border: darkblue solid 2px;
+  font-size: 40px;
+  padding: 1em;
+  text-align: center;
+}
+
+.middle-body{
+  border: darkblue solid 2px;
+  font-size: 40px;
+  padding: 1em;
+  text-align: center;
+}
+
+.bottom-body {
+  border: darkblue solid 2px;
+  font-size: 40px;
+  padding: 1em;
+  text-algin: center;
+}
+
+.wbox {
+  background-color:white;
+  border: groove;
+  width: 60%;
+  display:inline-block;
+}
+
+.wbox2 {
+  background-color:white;
+  border: groove;
+  width: 100%;
+  display:inline-block;
+}
+
+.wbox3 {
+  background-color:white;
+  border: groove;
+  width: 100%;
+  display:inline-block;
+  padding: 10px;
+}
+
+.wbox4 {
+  background-color:white;
+  border: groove;
+  width: 49%;
+  display:inline-block;
+}
+
+
+.left {
+  float: right;
+  padding-right: 2.5em;
+}
+
+.spe {
+  border: solid green;
+  padding: 8px;
+  background-color: lightgreen;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:1732px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .resp {
+    width: 50%;
+  }
